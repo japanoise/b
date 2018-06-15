@@ -4,8 +4,7 @@ Just my random MS-DOS asm experiments.
 
 ## to-do, maybe
 
-- Branching examples
-- Sprite printing and loading
+- Sprite loading
 - C/asm interoperability
 - Simple tutorials?
 
@@ -18,3 +17,4 @@ Just my random MS-DOS asm experiments.
 - [FASM tutorial](http://bos.asmhackers.net/docs/FASM%20tutorial/)
 - [Hello World + information on MZ EXE](https://stackoverflow.com/questions/4174565/fasm-helloworld-exe-program?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
 - [`int 21h` reference](http://spike.scu.edu.au/~barry/interrupts.html)
+- [How to branch](https://en.wikibooks.org/wiki/X86_Disassembly/Branches)
