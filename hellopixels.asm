@@ -19,7 +19,7 @@ int 21h
 call waitkey
 
 ;;; SECOND DEMO - PIXELS
-; Go into CGA mode 13h
+; Go into VGA mode 13h
 mov ah,0
 mov al,13h ; AH=0 (Change video mode), AL=13h (Mode)
 int 10h ; Video BIOS interrupt
