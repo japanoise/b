@@ -69,7 +69,9 @@ spriteloop:
 	push cx
 	add ax,dx
 	add bx,cx
-	push word [si]
+	mov dh,[si]
+	mov dl,[si]
+	push dx
 	call putpixel
 	pop bx
 	pop ax
@@ -77,26 +79,26 @@ spriteloop:
 transp:
 	;; Loop round again
 	add dx,1
-	add si,2
+	add si,1
 	cmp dx,40h
 	jne spriteloop
 	ret
 
 ;;; Data begins here
-	blue = 0x2020
-	tran = 0x0000
-	lblu = 0x3535
-	whit = 0x0F0F
-	skin = 0x5959
-	gren = 0x0303
-	pink = 0x3F3F
+	blue = 0x20
+	tran = 0x00
+	lblu = 0x35
+	whit = 0x0F
+	skin = 0x59
+	gren = 0x03
+	pink = 0x3F
 
 sprite: 			; Simple 8*8 sprite
-	dw lblu,lblu,lblu,tran,tran,tran,tran,tran
-	dw tran,tran,lblu,lblu,lblu,blue,tran,tran
-	dw tran,lblu,blue,lblu,blue,lblu,blue,tran
-	dw lblu,blue,skin,lblu,skin,lblu,blue,tran
-	dw tran,blue,gren,skin,gren,lblu,blue,skin
-	dw tran,lblu,skin,skin,skin,lblu,skin,skin
-	dw lblu,blue,pink,pink,lblu,skin,skin,tran
-	dw lblu,blue,whit,whit,lblu,whit,blue,tran
+	db lblu,lblu,lblu,tran,tran,tran,tran,tran
+	db tran,tran,lblu,lblu,lblu,blue,tran,tran
+	db tran,lblu,blue,lblu,blue,lblu,blue,tran
+	db lblu,blue,skin,lblu,skin,lblu,blue,tran
+	db tran,blue,gren,skin,gren,lblu,blue,skin
+	db tran,lblu,skin,skin,skin,lblu,skin,skin
+	db lblu,blue,pink,pink,lblu,skin,skin,tran
+	db lblu,blue,whit,whit,lblu,whit,blue,tran
